@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
+    {{#is "post, page"}}
+    <link rel="stylesheet" type="text/css" href="{{asset "built/fluidbox.min.css"}}" />
+    {{/is}}
 
     <title>{{meta_title}}</title>
 
@@ -92,6 +95,7 @@ $(document).ready(function () {
 
 {{#is "post, page"}}
 <script src="{{asset "built/jquery.fitvids.js"}}"></script>
+<script src="{{asset "built/jquery.fluidbox.js"}}"></script>
 <script>
 var images = document.querySelectorAll('.kg-gallery-image img');
 images.forEach(function (image) {
@@ -101,9 +105,21 @@ images.forEach(function (image) {
     var ratio = width / height;
     container.style.flex = ratio + ' 1 0%';
 });
+
+// Gallery zooming
 $(document).ready(function () {
+    $('.kg-width-wide img').each(function (index, el) {
+        $("<a href='" + $(this).attr('src') + "' class='zoom'></a>").insertAfter($(this));
+        $(this).appendTo($(this).next("a"));
+    });
+    $('.zoom').fluidbox();
+
     var $postContent = $(".gh-content");
     $postContent.fitVids();
+
+    $(window).on('scroll', function (event) {
+        $('.zoom').fluidbox('close');
+    });
 });
 </script>
 {{/is}}

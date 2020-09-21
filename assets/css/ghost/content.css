@@ -221,6 +221,10 @@
     justify-content: center;
 }
 
+.kg-gallery-row a.fluidbox--ready {
+    cursor: zoom-in;
+}
+
 .kg-gallery-image img {
     display: block;
     margin: 0;

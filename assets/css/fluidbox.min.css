@@ -14,7 +14,8 @@
 }
 
 .fluidbox__overlay {
-    background-color: hsla(0, 0%, 100%, 0.85);
+    /* background-color: hsla(0, 0%, 100%, 0.85); */
+    background-color:rgba(0, 0, 0, 0.5);
     cursor: pointer;
     cursor: zoom-out;
     opacity: 0;

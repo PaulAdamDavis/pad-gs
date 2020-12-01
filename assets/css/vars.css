@@ -4,9 +4,9 @@
 :root {
 
     /* Colours */
-    --color-primary: #3eb0ef;
+    --color-primary: #8A9F3B;
     --color-base: #131313;
-    --color-border: #ddd;
+    --color-border: rgb(5, 5, 5);
     --color-bg: #f5f5f5;
     --color-success: #80b912;
     --color-error: #f05230;

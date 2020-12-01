@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: center;
     padding: 8vmin 4vmin;
+    border-bottom: clamp(7px, 1vw, 10px) solid var(--color-primary);
 }
 
 .gh-foot .gh-container {
@@ -54,4 +55,12 @@
     .gh-foot-menu .nav {
         font-size: 1.6rem;
     }
+}
+
+.gh-foot-secondary-menu {
+    margin-top: 1em;
+}
+
+.gh-foot-secondary-menu .nav a {
+    font-size: 1.4rem;
 }

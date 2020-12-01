@@ -54,7 +54,7 @@ html,
 }
 
 .gh-postfeed {
-    padding: 8vmin 0;
+    padding: 0 0 8vmin;
 }
 
 .gh-container {

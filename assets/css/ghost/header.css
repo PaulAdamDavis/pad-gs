@@ -2,10 +2,11 @@
 /* ---------------------------------------------------------- */
 
 .gh-head {
-    padding: 3vmin 4vmin;
+    padding: 5vmin 4vmin;
     font-size: 1.6rem;
     line-height: 1.3em;
     background: inherit;
+    border-top: clamp(7px, 1vw, 10px) solid var(--color-primary);
 }
 
 .gh-head a {
@@ -72,7 +73,7 @@
 }
 
 .gh-head-menu .nav-current a {
-    box-shadow: 0 -1px 0 0 currentcolor inset;
+    box-shadow: 0 -1px 0 0 var(--color-primary) inset;
 }
 
 
